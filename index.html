@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPG Color</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>XPG Color</h1>
+    </header>
+    <main>
+        <section class="controls">
+            <label for="imageUpload" class="icon-btn" title="Carregar Imagem">
+                <i class="material-icons">upload</i>
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <span class="icon-btn" id="undoBtn" title="Voltar à Imagem Anterior" disabled>
+                <i class="material-icons">undo</i>
+            </span>
+            <span class="icon-btn" id="resetBtn" title="Restaurar Imagem Original" disabled>
+                <i class="material-icons">restart_alt</i>
+            </span>
+            <span class="icon-btn" id="downloadBtn" title="Download" disabled>
+                <i class="material-icons">download</i>
+            </span>
+            <div id="colorPreview" class="color-box"></div>
+            <input type="text" id="colorInput" placeholder="HEX (ex: #FF0000)">
+            <button id="applyColorBtn" disabled>Aplicar</button>
+        </section>
+        <section class="color-palette" id="colorPalette"></section>
+        <section class="canvas-container">
+            <canvas id="imageCanvas"></canvas>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
